@@ -23,24 +23,12 @@
     "ext-mbstring": "*"
   },
   "autoload": {
-    "psr-0": {
-      "Horde_Crypt_Blowfish": "lib/pear-pear.horde.org/",
-      "Horde_Exception": "lib/pear-pear.horde.org/",
-      "Horde_Idna": "lib/pear-pear.horde.org/",
-      "Horde_Imap_Client": "lib/pear-pear.horde.org/",
-      "Horde_ListHeaders": "lib/pear-pear.horde.org/",
-      "Horde_Mail": "lib/pear-pear.horde.org/",
-      "Horde_Mime": "lib/pear-pear.horde.org/",
-      "Horde_Secret": "lib/pear-pear.horde.org/",
-      "Horde_Socket_Client": "lib/pear-pear.horde.org/",
-      "Horde_Stream": "lib/pear-pear.horde.org/",
-      "Horde_Stream_Filter": "lib/pear-pear.horde.org/",
-      "Horde_Stream_Wrapper": "lib/pear-pear.horde.org/",
-      "Horde_Support": "lib/pear-pear.horde.org/",
-      "Horde_Text_Flowed": "lib/pear-pear.horde.org/",
-      "Horde_Text_Translation": "lib/pear-pear.horde.org/",
-      "Horde_Text_Util": "lib/pear-pear.horde.org/"
-    },
+    "classmap": [
+      "lib/pear-pear.horde.org/"
+    ],
+    "exclude-from-classmap": [
+      "lib/pear-pear.horde.org/Horde_Socket_Client/"
+    ],
     "psr-4": {
       "Horde\\Socket\\": "lib/pear-pear.horde.org/Horde_Socket_Client/Horde/Socket/"
     }
