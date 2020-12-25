@@ -1,0 +1,48 @@
+{
+  "name": "horde/imap-client",
+  "description": "IMAP client library",
+  "type": "library",
+  "homepage": "https://www.horde.org/libraries/Horde_Imap_Client",
+  "license": "LGPL-2.1",
+  "authors": [
+    {
+      "name": "Michael Slusarz",
+      "email": "slusarz@horde.org",
+      "role": "lead"
+    }
+  ],
+  "version": "2.30.0",
+  "time": "2019-09-29",
+  "require": {
+    "php": "^5.3 || ^7 || ^8",
+    "ext-hash": "*",
+    "ext-json": "*"
+  },
+  "suggest": {
+    "ext-intl": "*",
+    "ext-mbstring": "*"
+  },
+  "autoload": {
+    "psr-0": {
+      "Horde_Crypt_Blowfish": "lib/pear-pear.horde.org/",
+      "Horde_Exception": "lib/pear-pear.horde.org/",
+      "Horde_Idna": "lib/pear-pear.horde.org/",
+      "Horde_Imap_Client": "lib/pear-pear.horde.org/",
+      "Horde_ListHeaders": "lib/pear-pear.horde.org/",
+      "Horde_Mail": "lib/pear-pear.horde.org/",
+      "Horde_Mime": "lib/pear-pear.horde.org/",
+      "Horde_Secret": "lib/pear-pear.horde.org/",
+      "Horde_Socket_Client": "lib/pear-pear.horde.org/",
+      "Horde_Stream": "lib/pear-pear.horde.org/",
+      "Horde_Stream_Filter": "lib/pear-pear.horde.org/",
+      "Horde_Stream_Wrapper": "lib/pear-pear.horde.org/",
+      "Horde_Support": "lib/pear-pear.horde.org/",
+      "Horde_Text_Flowed": "lib/pear-pear.horde.org/",
+      "Horde_Text_Translation": "lib/pear-pear.horde.org/",
+      "Horde_Text_Util": "lib/pear-pear.horde.org/"
+    },
+    "psr-4": {
+      "Horde\\Socket\\": "lib/pear-pear.horde.org/Horde_Socket_Client/Horde/Socket/"
+    }
+  }
+}
