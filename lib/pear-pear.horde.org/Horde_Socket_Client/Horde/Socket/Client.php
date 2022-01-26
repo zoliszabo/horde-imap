@@ -5,7 +5,7 @@ namespace Horde\Socket;
 /**
  * Copyright 2013-2017 Horde LLC (http://www.horde.org/)
  *
- * See the enclosed file LICENSE for license information (LGPL). If you
+ * See the enclosed file COPYING for license information (LGPL). If you
  * did not receive this file, see http://www.horde.org/licenses/lgpl21.
  *
  * @category  Horde
@@ -144,7 +144,8 @@ class Client
     {
         if ($this->connected && !$this->secure) {
             if (defined('STREAM_CRYPTO_METHOD_TLSv1_0_CLIENT')) {
-                $mode = STREAM_CRYPTO_METHOD_TLSv1_0_CLIENT
+                $mode = STREAM_CRYPTO_METHOD_TLS_CLIENT
+                    | STREAM_CRYPTO_METHOD_TLSv1_0_CLIENT
                     | STREAM_CRYPTO_METHOD_TLSv1_1_CLIENT
                     | STREAM_CRYPTO_METHOD_TLSv1_2_CLIENT;
             } else {

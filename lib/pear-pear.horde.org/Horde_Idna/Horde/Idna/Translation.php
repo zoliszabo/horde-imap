@@ -36,5 +36,5 @@ class Horde_Idna_Translation extends Horde_Translation_Autodetect
      *
      * @var string
      */
-		protected static $_pearDirectory;
+    protected static $_pearDirectory;
 }

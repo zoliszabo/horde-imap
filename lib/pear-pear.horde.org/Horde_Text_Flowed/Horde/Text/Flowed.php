@@ -15,7 +15,7 @@
  *
  * @author   Michael Slusarz <slusarz@horde.org>
  * @category Horde
- * @license  http://www.horde.org/licenswes/lgpl21 LGPL 2.1
+ * @license  http://www.horde.org/licenses/lgpl21 LGPL 2.1
  * @package  Text_Flowed
  */
 class Horde_Text_Flowed
