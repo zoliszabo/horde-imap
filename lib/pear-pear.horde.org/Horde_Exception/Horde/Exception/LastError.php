@@ -1,15 +1,25 @@
 <?php
 /**
+ * Copyright 2008-2017 Horde LLC (http://www.horde.org/)
+ *
+ * See the enclosed file LICENSE for license information (LGPL). If you
+ * did not receive this file, see http://www.horde.org/licenses/lgpl21.
+ *
+ * @author   
+ * @category Horde
+ * @license  http://www.horde.org/licenses/lgpl21 LGPL
+ * @package  Exception
+ */
+
+/**
  * Horde exception class that accepts output of error_get_last() as $code and
  * mask itself as that error.
  *
- * Copyright 2008-2016 Horde LLC (http://www.horde.org/)
- *
- * See the enclosed file COPYING for license information (LGPL). If you
- * did not receive this file, see http://www.horde.org/licenses/lgpl21.
- *
- * @category Horde
- * @package  Exception
+ * @author    
+ * @category  Horde
+ * @copyright 2008-2017 Horde LLC
+ * @license   http://www.horde.org/licenses/lgpl21 LGPL
+ * @package   Exception
  */
 class Horde_Exception_LastError extends Horde_Exception
 {
@@ -38,7 +48,7 @@ class Horde_Exception_LastError extends Horde_Exception
             $this->file = $code_or_lasterror['file'];
             $this->line = $code_or_lasterror['line'];
         } else {
-            parent::__construct($message, $code_or_lasterror);
+            parent::__construct($message, $code_or_lasterror ?? 0);
         }
     }
 

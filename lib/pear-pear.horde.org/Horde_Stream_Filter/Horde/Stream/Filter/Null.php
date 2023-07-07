@@ -12,7 +12,7 @@
  *   - replace: (string) The string to use to replace null characters with.
  *          DEFAULT: ''
  *
- * Copyright 2012-2016 Horde LLC (http://www.horde.org/)
+ * Copyright 2012-2017 Horde LLC (http://www.horde.org/)
  *
  * See the enclosed file COPYING for license information (LGPL). If you
  * did not receive this file, see http://www.horde.org/licenses/lgpl21.
@@ -41,6 +41,7 @@ class Horde_Stream_Filter_Null extends php_user_filter
     /**
      * @see stream_filter_register()
      */
+    #[ReturnTypeWillChange]
     public function onCreate()
     {
         $this->_replace = isset($this->params->replace)
@@ -53,6 +54,7 @@ class Horde_Stream_Filter_Null extends php_user_filter
     /**
      * @see stream_filter_register()
      */
+    #[ReturnTypeWillChange]
     public function filter($in, $out, &$consumed, $closing)
     {
         while ($bucket = stream_bucket_make_writeable($in)) {
